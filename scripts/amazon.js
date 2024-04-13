@@ -1,4 +1,5 @@
 import { cart } from "../data/cart.js";
+import { products } from "../data/products.js";
 
 let productsHTML = "";
 
@@ -77,7 +78,7 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
         productId: productId,
         quantity: 1,
       });
-    };
+    }
 
     let cartQuantity = 0;
 
@@ -85,6 +86,6 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
       cartQuantity += item.quantity;
     });
 
-    document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+    document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
   });
 });
